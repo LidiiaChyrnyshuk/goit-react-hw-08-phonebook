@@ -1,10 +1,10 @@
 .contactList {
-  width: 750px;
+  width: 500px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  border: 2px solid black;
+  border: 2px solid rgb(157, 31, 179);
   border-radius: 4px;
 }
 
@@ -19,11 +19,11 @@
   gap: 20px;
   justify-content: space-between;
 
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .btnDelete {
-  width: 200px;
+  width: 100px;
   padding: 5px;
   color: #000;
   font-size: 20px;

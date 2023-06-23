@@ -26,7 +26,12 @@ export const RegisterForm = () => {
       >
         <label className={css.registerLabel}>
           Name
-          <input className={css.registerInput} type="text" name="name" />
+          <input
+            className={css.registerInput}
+            type="text"
+            name="name"
+            required
+          />
         </label>
         <label className={css.registerLabel}>
           Email
@@ -36,6 +41,7 @@ export const RegisterForm = () => {
             name="email"
             placeholder="User@gmail.com"
             pattern="^((([0-9A-Za-z]{1}[-0-9A-z\.]{0,30}[0-9A-Za-z]?)|([0-9А-Яа-я]{1}[-0-9А-я\.]{0,30}[0-9А-Яа-я]?))@([-A-Za-z]{1,}\.){1,}[-A-Za-z]{2,})$"
+            required
           />
         </label>
         <label className={css.registerLabel}>
@@ -46,6 +52,7 @@ export const RegisterForm = () => {
             name="password"
             placeholder="User1234"
             pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
+            required
           />
         </label>
         <button type="submit" className={css.btnRegister}>
