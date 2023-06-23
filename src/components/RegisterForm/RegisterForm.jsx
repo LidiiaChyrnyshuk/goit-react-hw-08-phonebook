@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/authOperations';
+import css from './RegisterForm.module.css';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -17,28 +18,40 @@ export const RegisterForm = () => {
     form.reset();
   };
   return (
-    <form onSubmit={handleSubmit} autoComplete="off">
-      <label>
-        Name
-        <input type="text" name="name" />
-      </label>
-      <label>
-        Email
-        <input
-          type="email"
-          name="email"
-          pattern="^((([0-9A-Za-z]{1}[-0-9A-z\.]{0,30}[0-9A-Za-z]?)|([0-9А-Яа-я]{1}[-0-9А-я\.]{0,30}[0-9А-Яа-я]?))@([-A-Za-z]{1,}\.){1,}[-A-Za-z]{2,})$"
-        />
-      </label>
-      <label>
-        Password
-        <input
-          type="password"
-          name="password"
-          pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
-        />
-      </label>
-      <button type="submit">Register</button>
-    </form>
+    <div>
+      <form
+        onSubmit={handleSubmit}
+        autoComplete="off"
+        className={css.registerForm}
+      >
+        <label className={css.registerLabel}>
+          Name
+          <input className={css.registerInput} type="text" name="name" />
+        </label>
+        <label className={css.registerLabel}>
+          Email
+          <input
+            className={css.registerInput}
+            type="email"
+            name="email"
+            placeholder="User@gmail.com"
+            pattern="^((([0-9A-Za-z]{1}[-0-9A-z\.]{0,30}[0-9A-Za-z]?)|([0-9А-Яа-я]{1}[-0-9А-я\.]{0,30}[0-9А-Яа-я]?))@([-A-Za-z]{1,}\.){1,}[-A-Za-z]{2,})$"
+          />
+        </label>
+        <label className={css.registerLabel}>
+          Password
+          <input
+            className={css.registerInput}
+            type="password"
+            name="password"
+            placeholder="User1234"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
+          />
+        </label>
+        <button type="submit" className={css.btnRegister}>
+          Register
+        </button>
+      </form>
+    </div>
   );
 };

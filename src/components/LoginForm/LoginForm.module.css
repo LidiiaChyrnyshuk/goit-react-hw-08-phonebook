@@ -1,4 +1,4 @@
-.form {
+.loginForm {
   width: 750px;
   padding: 20px;
   display: flex;
@@ -8,13 +8,13 @@
   border-radius: 4px;
 }
 
-.label {
+.loginLabel {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.input {
+.loginInput {
   width: 90%;
   height: 40px;
   padding: 10px;
@@ -24,12 +24,12 @@
   transition: box-shadow 250ms linear;
 }
 
-.input:focus,
-.input:hover {
+.loginInput:focus,
+.loginInput:hover {
   box-shadow: 5px -5px 5px 0px rgb(160, 34, 192);
 }
 
-.btn {
+.btnLogin {
   width: 200px;
   padding: 5px;
   color: #000;
@@ -39,7 +39,7 @@
   cursor: pointer;
   transition: background-color 250ms linear, box-shadow 250ms linear;
 }
-.btn:hover {
+.btnLogin:hover {
   background-color: rgba(57, 235, 57, 0.7);
   box-shadow: 5px -5px 5px 0px rgba(8, 252, 0, 1);
   border: none;
