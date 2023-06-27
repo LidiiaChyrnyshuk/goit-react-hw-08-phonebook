@@ -50,7 +50,7 @@ export const RegisterForm = () => {
             className={css.registerInput}
             type="password"
             name="password"
-            placeholder="User1234"
+            placeholder="min 8 symbols,uppercase and lowercase charasters"
             pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
             required
           />

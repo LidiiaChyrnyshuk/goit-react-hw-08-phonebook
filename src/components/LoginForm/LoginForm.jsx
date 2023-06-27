@@ -18,6 +18,7 @@ export const LoginForm = () => {
       .unwrap()
       .then(response => {
         toast.success(`Wellcome, ${response.user.name}!`);
+        console.log(response.user.name);
       })
       .catch(() => toast.error('Login error - wrong email or password.'));
     form.reset();
